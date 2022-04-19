@@ -1,0 +1,19 @@
+<?php
+if(isset($_POST['Submit'])){
+$user_name = "Enter Your Name".$_POST['user_name']."
+";
+$user_email = "abcdef@xyz.com".$_POST['user_email']."
+";
+$phone_number = "123-456-7890".$_POST['phone_number']."
+";
+$short_message = "type here".$_POST['short_message']."
+";
+$file=fopen("Formstuff.txt", "a");
+fwrite($file, $user_name);
+fwrite($file, $user_email);
+fwrite($file, $phone_number);
+fwrite($file, $short_message);
+
+fclose($file);
+}
+?>

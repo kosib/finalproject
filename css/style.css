@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+	font-family: 'Open Sans' ;
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	background-color: #F3FFD0;
+}
+
+@media only screen and (min-width: 900px){
+    header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+}
+
+h1{
+	align-items: center;
+	font-size: 48px; 
+	font-weight: bold;
+	text-align: center;
+	padding: 15px;
+	background-color: #C8A2C8;
+}
+
+.grid-container{
+	display: grid;
+	column-gap: 50px;
+	grid-template-columns:auto auto;
+
+}
+.form{
+	border:3px #000000;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-image: url('resize.jpg');
+	resize: none;
+  }
+.dump-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.header{
+	cursor: alias;
+}
+.active{
+	background: white;
+    text-transform: capitalize;
+	text-align: center;
+}
+/* tablet responsive design*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.grid-container{
+		display: grid;
+		column-gap: 50px;
+		grid-template-columns:auto auto auto;
+	
+	}
+
+}
+/* laptop responsive design - nonretina screen */ 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+	.grid-container{
+		display: grid;
+		column-gap: 50px;
+		grid-template-columns:auto auto auto auto;
+	
+	}
+}
+
+/* retina-screen */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+.active a{
+	text-decoration: none;
+}
+
+a:link, a:visited{
+	color: blue;
+}
+.skip{
+	position: absolute;
+	left: -999px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	display: inline-block;
+	border: 3px solid black;
+}
+#meep{
+    animation: mymove 3s;
+    }
+@keyframes mymove {
+    from {width: 0px; opacity: 0;}
+    to {width: 200px; opacity: 1;}
+    }
+@media (prefers-reduced-motion) {
+		#meep {
+		  animation-name: none;
+		}
+	  }
+/*Style the images*/
+img{
+    height: 200px;
+    width:auto;
+    padding: 25px;
+    margin: 10px;
+}
+.active{
+	background-color: #C8A2C8;
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+p, h1, h2 {
+    padding: 10px;
+}
+
+h3{
+	font-size: 35px;
+	font-weight: bold;
+}
+/*Add borders around the main components and some
+space too*/
+header{
+	border: 2px solid grey;
+	margin: 10px 0;
+}
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav li{
+	background-color: #e4e6d4;
+	padding:10px;
+	width: 25%;
+	border:1px solid black;
+	display: inline-block;
+}
+
+.writings-grid{
+	display: grid;
+	column-gap: 50px;
+	grid-template-columns:auto auto;
+
+}
+a:visited{color:#000000}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+	background-color: white;
+	width: 200px;
+	height:fit-content;
+	border: 1px solid #f1f1f1;
+	z-index: 1;
+  }
+  .flip-card:focus{
+	  outline: red;
+	  background: #bbb;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+	background-color: #bbb;
+	color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+	background-color: darkgrey;
+	color: black;
+	transform: rotateY(180deg);
+  }
+  @media (prefers-reduced-motion) {
+	.flip-card-front,.flip-card-back,.flip-card-inner,.flip-card:hover {
+		animation-duration: 0.00ms !important;
+		transition-duration: 0.00ms !important;
+	}
+  }
