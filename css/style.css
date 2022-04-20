@@ -9,7 +9,7 @@ body{
 	background-color: #F3FFD0;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (max-width: 749px){
     header{
     display: flex;
     align-items: center;
@@ -20,7 +20,24 @@ body{
     flex-wrap: wrap;
     }
 }
-
+.parallax {
+	/* The image used */
+	background-image: url("../images/parallax.jpeg");
+ 
+	/* Full height */
+	height: 100%; 
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+@media (prefers-reduced-motion) {
+	.parallax {
+	  background-attachment: scroll;
+	}
+  }
 h1{
 	align-items: center;
 	font-size: 48px; 
@@ -47,7 +64,7 @@ textarea {
 	box-sizing: border-box;
 	border: 2px solid #ccc;
 	border-radius: 4px;
-	background-image: url('resize.jpg');
+	background-image: url("../images/resize.jpeg");
 	resize: none;
   }
 .dump-container{
@@ -63,13 +80,11 @@ textarea {
 	text-align: center;
 }
 /* tablet responsive design*/
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 600px) {
 	.grid-container{
 		display: grid;
-		column-gap: 50px;
+		background-color: #f1f1f1;
+		column-gap: 10px;
 		grid-template-columns:auto auto auto;
 	
 	}
@@ -77,12 +92,11 @@ textarea {
 }
 /* laptop responsive design - nonretina screen */ 
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+  and (min-device-width: 768px) { 
 	.grid-container{
+		background-color: darkgreen;
 		display: grid;
-		column-gap: 50px;
+		column-gap: 5px;
 		grid-template-columns:auto auto auto auto;
 	
 	}
@@ -90,8 +104,7 @@ textarea {
 
 /* retina-screen */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
+  and (min-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 }
@@ -103,11 +116,15 @@ a:link, a:visited{
 	color: blue;
 }
 .skip{
-	position: absolute;
+	position: relative;
 	left: -999px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	display: inline-block;
 	border: 3px solid black;
+}
+
+.skip:focus{
+	left:0;
 }
 #meep{
     animation: mymove 3s;
@@ -215,7 +232,7 @@ a:visited{color:#000000}
   
   /* Style the back side */
   .flip-card-back {
-	background-color: darkgrey;
+	background-image:url("../images/back.jpg");
 	color: black;
 	transform: rotateY(180deg);
   }

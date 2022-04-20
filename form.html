@@ -39,7 +39,7 @@
     }
   </style>
 </head>
-<a class = "skip" href="#p">Jump to the good stuff</a>
+<a class = "skip" href="#main">Jump to the good stuff</a>
   <header>
     <nav>
       <div class="header">
@@ -55,32 +55,38 @@
   </nav>
   <h1>Form</h1>
 </header>
+<main id="main">
+
 <div class = "form">
  <form 
   action = https://formspree.io/f/xnqwgwzb
   method="POST"
  >
   <fieldset>
-    <legend><h3>Contact Me</h3></legend>
-    <h3>Your Name or Cool Title like "Overlord"</h3>
-    <input type="text" name="user_name" placeholder="Enter Your Name">
-    <label for="Enter Your Name"> Name </label>
+    <legend><h2>Contact Me</h2></legend>
+    <span>Your Name or Cool Title like "Overlord"</span>
+    <input type="text" name="user_name" id ="name" placeholder="Enter Your Name">
+    <label for="name"> Name </label>
 
-    <h3> Email </h3>
-    <input type="email" name="user_email" placeholder="abcdef@xyz.com"> 
+    <span> Email </span>
+    <input type="email" name="user_email" id="email" placeholder="abcdef@xyz.com"> 
+    <label for="email"> email </label>
 
 
-    <h3>Your Phone Number</h3>
-    <input type="tel" name="phone_number" placeholder="123-456-7890">
+    <span>Your Phone Number</span>
+    <input type="tel" name="phone_number" id="phone" placeholder="123-456-7890">
+    <label for="phone"> phone </label>
 
-    <h3>Leave A Cool Message</h3>
+    <span>Leave A Cool Message</span>
 
-    <input type="text" name="short_message" placeholder="type here">
+    <input type="text" name="short_message" id="typehere" placeholder="type here">
+    <label for="typehere"> typehere </label>
 
     <p>Hit submit my guy, that's how I see your message </p>
     <input type="submit" value="Submit">
   </fieldset>
  </form>
+ </main>
  <footer>
   <p>Kosi Browne<i class="fa-solid fa-arrows-to-circle"></i></p>
 </footer>
